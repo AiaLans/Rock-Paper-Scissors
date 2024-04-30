@@ -44,4 +44,12 @@ function determineWinner(user, computer) {
         result.text = "Computer wins!";
     }
 
+    result.image = new Image();
+    if (result.text === "You win!") {
+        result.image.src = 'https://i.pinimg.com/474x/0a/35/6f/0a356f7707b18dd91ea810173b29bd67.jpg';
+    } else if (result.text === "Computer wins!") {
+        result.image.src = 'https://i.pinimg.com/564x/8a/78/93/8a78937e3faabf29b624c57e350f5424.jpg';
+    } else {
+        result.image.src = 'https://i.pinimg.com/564x/90/2e/01/902e011736b72b386b848ecaf388c018.jpg'; 
+    }
 }
