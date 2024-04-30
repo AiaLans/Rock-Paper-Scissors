@@ -52,4 +52,5 @@ function determineWinner(user, computer) {
     } else {
         result.image.src = 'https://i.pinimg.com/564x/90/2e/01/902e011736b72b386b848ecaf388c018.jpg'; 
     }
+    return result; 
 }
