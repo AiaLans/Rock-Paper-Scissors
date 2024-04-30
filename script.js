@@ -1,5 +1,8 @@
 function play (userChoice) {
     var icons = document.querySelectorAll('.icons div');
+    icons.forEach(function(icon) { 
+        icon.style.display = 'none'; 
+    })
 
     var countdown = document.getElementById('count');   
     countdown.innerHTML = '3';
