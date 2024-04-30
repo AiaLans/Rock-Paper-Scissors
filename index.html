@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="icons">
+        <div id="rock" onclick="play('rock')">
+            <i class="fa-regular fa-hand-back-fist"></i>
+            <h5>Rock</h5>
+        </div>
+        <div id="paper" onclick="play('paper')">
+            <i class="fa-regular fa-hand"></i>
+            <h5>Paper</h5>
+        </div>
+        <div id="scissors" onclick="play('scissors')">
+            <i class="fa-regular fa-hand-scissors"></i>
+            <h5>Scissors</h5>
+        </div>
+    </div>
+    <div id="count"></div>
+    <div id="result"></div>
+    
+    <script src="https://kit.fontawesome.com/ebf21f9abe.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
