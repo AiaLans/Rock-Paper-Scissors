@@ -1,3 +1,5 @@
+var round = 1;
+
 function play (userChoice) {
     var icons = document.querySelectorAll('.icons div');
     icons.forEach(function(icon) { 
@@ -25,10 +27,28 @@ function play (userChoice) {
             var winner = determineWinner(userChoice, computerChoice);
             result.innerHTML = winner.text;
             result.appendChild(winner.image);
+            if (round < 3) {
+                setTimeout(function() {
+                    round++;
+                    playAgain();
+                    updateRound();
+                }, 2000); 
+            } else {
+                round = 3; 
+            }
             return;
         }
         countdown.innerHTML = count.toString();
     }, 1000);
+}
+
+function playAgain() {
+    var icons = document.querySelectorAll('.icons div');
+    icons.forEach(function(icon) { 
+        icon.style.display = 'block'; 
+    });
+    var result = document.getElementById('result');
+    result.innerHTML = '';
 }
 
 function determineWinner(user, computer) {
@@ -53,4 +73,9 @@ function determineWinner(user, computer) {
         result.image.src = 'https://i.pinimg.com/564x/90/2e/01/902e011736b72b386b848ecaf388c018.jpg'; 
     }
     return result; 
+}
+
+function updateRound() {
+    var roundElement = document.getElementById('round');
+    roundElement.innerHTML = 'Round: ' + round;
 }
