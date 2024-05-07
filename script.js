@@ -32,14 +32,14 @@ function play (userChoice) {
                     round++;
                     playAgain();
                     updateRound();
-                }, 2000); 
+                }, 3000); 
             } else {
                 round = 3; 
             }
             return;
         }
         countdown.innerHTML = count.toString();
-    }, 1000);
+    }, 2000);
 }
 
 function playAgain() {
